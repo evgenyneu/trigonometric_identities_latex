@@ -1,6 +1,6 @@
 # Trigonometric identities
 
-This is a LaTeX document containing trigonometric identities that can be useful for a high school or a university students.
+This is a LaTeX document containing trigonometric identities that can be useful for a high school or a university student.
 
 ## Feedback is welcome
 
