@@ -4,7 +4,7 @@ This is a LaTeX document containing trigonometric identities that can be useful 
 
 ## Feedback is welcome
 
-If you found a problem or want to extend the list feel free to submit an issue ticket.
+If you found a problem or want to add identities feel free to submit an issue ticket.
 
 ## License
 
