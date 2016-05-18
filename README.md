@@ -2,7 +2,9 @@
 
 This is a LaTeX document containing basic trigonometric identities that can be useful for a student.
 
-[http://evgenii.com/blog/basic-trigonometric-identities/](http://evgenii.com/blog/basic-trigonometric-identities/)
+[PDF file](http://evgenii.com/files/2016/05/trigonometric_identities.pdf)
+
+Source: [http://evgenii.com/blog/basic-trigonometric-identities/](http://evgenii.com/blog/basic-trigonometric-identities/)
 
 ## Feedback is welcome
 
