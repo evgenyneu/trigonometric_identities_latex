@@ -2,6 +2,8 @@
 
 This is a LaTeX document containing basic trigonometric identities that can be useful for a student.
 
+[http://evgenii.com/blog/basic-trigonometric-identities/](http://evgenii.com/blog/basic-trigonometric-identities/)
+
 ## Feedback is welcome
 
 If you found a problem or want to add identities feel free to submit an issue ticket.
