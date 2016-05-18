@@ -9,36 +9,11 @@
 \usepackage{bm} % Bold math text \bm{x}
 \usepackage[makeroom]{cancel} % Cross out terms in equations
 \usepackage{siunitx} % Physical numbers and units
-\usepackage{fancyhdr} % Head and foot options
-\usepackage{graphicx} % Embed figures
-\usepackage{hyperref} % Uses automatic references \autoref
-\usepackage[tableposition=top]{caption} % Place captions on top of the tables
-\usepackage{titletoc} % Style table of contents with dots
-\usepackage{pgfplots} % Drawing graphsrestrict y to domain=-20:20
-\usepackage{enumitem} % Items with custom descriptions instead of numbers/bullets. Example: \begin{description} ... \item [label] text
-\usepackage{mathtools} % Used to show the absolute value symbol: \abs{a}
 
 % Used for long division
 \usepackage{scalerel}
 \usepackage{stackengine}
 \usepackage{xcolor}
-
-
-% Remove the warning for bibliography text:
-%
-%   "nderfull \hbox (badness 4492) in paragraph at lines"
-%
-% http://tex.stackexchange.com/a/10928/101976
-\usepackage{etoolbox}
-\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
-
-% Remove the warning for bibliography text:
-%
-%   "Overfull \hbox (5.53845pt too wide) in paragraph at lines"
-%
-% http://tex.stackexchange.com/questions/171999/overfull-hbox-in-biblatex
-\emergencystretch=1em
-
 
 % Page settings
 % ---------------------
@@ -49,54 +24,7 @@
 \parindent=0cm % Remove the paragraph indent of the first line
 \addtolength{\jot}{2\jot} % Double the line between equations
 \def\arraystretch{1.5} % Increase the vertical table cell margin
-\dottedcontents{part}[0em]{\bfseries}{0em}{1pc} % Use dots in the table of contents
-\renewcommand{\contentsname}{\centering Contents} % Center the table of contents header
 \raggedbottom % Prevents spreading the page content vetically for non-full pages.
-\setlength{\headheight}{20pt} % Height of the header
-\pgfplotsset{compat=1.12} %
-
-% Used for long division
-\newcommand\showdiv[1]{\overline{\smash{\hstretch{.5}{)}\mkern-3.2mu\hstretch{.5}{)}}#1}}
-\newcommand\ph[1]{\textcolor{white}{#1}}
-
-% PDFPlots
-%
-% Empty and filled dots for pdfplot
-%
-%   Usage:
-%     \addplot[holdot] coordinates{(5,0.0909)};
-%
-\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
-\pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*,mark options={scale=1.5, fill=white}}}
-
-
-% PDFPlots
-%
-% Vertical asymptote
-%
-%   Usage:
-%     \begin{axis}[vasymptote=1]
-%
-\pgfplotsset{vasymptote/.style={
-    before end axis/.append code={
-        \draw[densely dashed] ({rel axis cs:0,0} -| {axis cs:#1,0})
-        -- ({rel axis cs:0,1} -| {axis cs:#1,0});
-    }
-}}
-
-% PDFPlots
-%
-% Horizontal asymptote
-%
-%   Usage:
-%     \begin{axis}[hasymptote=1]
-%
-\pgfplotsset{hasymptote/.style={
-    before end axis/.append code={
-        \draw[densely dashed] ({axis cs:0,#1} -| {rel axis cs:0,0})
-        -- ({axis cs:0,#1} -| {rel axis cs:1,0});
-    }
-}}
 
 % Set vertical space around equations.
 \AtBeginDocument{%
@@ -106,37 +34,6 @@
  \belowdisplayshortskip=12pt plus 3pt minus 4pt
 }
 
-
-% Custom commands
-% ----------------------
-
-% Assignment answer header
-% Example:
-% 	\answer{Q.1 (b)}
-% 	Result: Answer Q.1 (b)
-% ----------------------
-
-\newcommand{\answer}[1]{
-	{
-		\medskip
-		\large\textbf{Answer #1}
-	}
-}
-
-% Make the proof white box a black box.
-\renewcommand{\qedsymbol}{\rule{0.7em}{0.7em}}
-
-% Show black box on the right
-\newcommand{\myproof}{
-  {
-    \begin{flushright}
-      \qedsymbol
-    \end{flushright}
-  }
-}
-
-% Absolute value symbol. Usage: \abs{a}
-\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 
 \begin{document}
 
